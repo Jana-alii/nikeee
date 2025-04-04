@@ -256,46 +256,46 @@ button {
     left:5px;
 }
 .buy-1 {
-    background: #a22188;
+    background: #e87bd2;
 
 }
 
 .buy-2 {
-    background: #a22188;
+    background: #e87bd2;
 }
 
 .buy-3 {
-    background: #a22188;
+    background: #e87bd2;
 
 }
 
 .buy-4 {
-    background: #a22188;
+    background: #e87bd2;
 
 }
 .buy-5{
-    background-color: #a22188;
+    background-color: #e87bd2;
 }
 .buy-6{
-    background-color: #a22188;
+    background-color: #e87bd2;
 }
 .buy-7{
-    background-color: rgb(248, 230, 124);
+    background-color: rgb(14, 14, 14);
 }
 .buy-8{
-    background-color: rgb(248, 230, 124);
+    background-color: rgb(13, 13, 13);
 }
 .buy-9{
-    background-color: rgb(248, 230, 124);
+    background-color: rgb(9, 9, 9);
 }
 .buy-10{
-    background-color: rgb(248, 230, 124);
+    background-color: rgb(10, 10, 10);
 }
 .buy-11{
-    background-color: rgb(248, 230, 124);
+    background-color: rgb(9, 9, 9);
 }
 .buy-12{
-    background-color: rgb(248, 230, 124);
+    background-color: rgb(10, 10, 10);
 }
 
 
@@ -347,10 +347,10 @@ button {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
-    color: #a22188;
+    color: #5e27a5;
 }
 .cartt button {
-    background-color: #d575c4;
+    background-color: #99b7eb;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -358,5 +358,5 @@ button {
 }
 
 .cartt button:hover {
-    background-color: #d575c4;
+    background-color: #f08fdf;
 }
