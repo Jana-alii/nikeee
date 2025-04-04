@@ -1,227 +1,122 @@
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Product Price</title>
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="../bootstrap/all.min.css" />
-    <link rel="stylesheet" href="../bootstrap.js/bootstrap.bundle.min.js" />
-    <link rel="stylesheet" href="../bootstrap.js/all.min.js" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Latest compiled JavaScript -->
-    <link rel="stylesheet" href="product1.css">
-    <link rel="stylesheet" href="cart.js">
-    <link href="mu.jpg" type="image/x-icon" rel="icon">
+  <meta charset="utf-8" />
+  <title>Product Price</title>
+  <link href="../bootstrap/bootstrap.min.css" rel="stylesheet" />
+  <link href="../bootstrap/all.min.css" rel="stylesheet" />
+  <link href="../bootstrap.js/bootstrap.bundle.min.js" rel="stylesheet" />
+  <link href="../bootstrap.js/all.min.js" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="products.css" rel="stylesheet" />
+  <link href="cart.js" rel="stylesheet" />
+  <link href="mu.jpg" rel="icon" type="image/x-icon" />
+  <style>
+    #floating-cart {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #a22188;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #floating-cart:hover {
+      background-color: #871a6d;
+    }
+  </style>
 </head>
 <body>
-    <h1>women shoes</h1>
-    <div class="Search-box">
-        <div class="neg">
-            <div class="box-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <input type="text" placeholder="Search" class="search-input" onkeyup="search()">
-        </div>
-    </div>
-   
-    <div class="gallery">
+  <h1>women shoes</h1>
 
-        <div class="content">
-
-            <img src="images/women/5lfya bada.webp">
-
-            <h3>pink shoes</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$500.00</h6>
-            <ul>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star "></i></li>
-            </ul>
-            <button class="buy-1">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-    
-           
-          
-        </div>
-
-
-
-        <div class="content">
-
-            <img src="images/women/purple girl shoes.jpeg">
-
-            <h3>purble shoes</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$450.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-2">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-
-        </div>
-
-
-        <div class="content">
-
-            <img src="images/women/white air jordan girls.jpeg">
-
-            <h3> white air jordan</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$520.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-3">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-        </div>
-
-
-
-        <div class="content">
-            <img src="images/women/high neck girls.jpeg">
-            <h3>high neck</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$600.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-4">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-        </div>
-
-
-
-        <div class="content">
-
-            <img src="images/women/girl running shoes.jpeg">
-            <h3>running shoes</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$278.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-5">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-
-
-        </div>
-
-
-
-        <div class="content">
-            <img src="images/women/green girl shoes.jpeg">
-            <h3>green shoes</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-            <h6>$399.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-6">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-           
-
-
-        </div>
+  <div class="gallery">
+    <div class="content">
+      <img src="images/women/5lfya bada.webp" />
+      <h3>Pink Shoes</h3>
+      <h6>$500.00</h6>
+      <button class="buy-1" data-product="Pink Shoes" onclick="toggleCart('Pink Shoes', 500, this)">Buy Now</button>
     </div>
 
+    <div class="content">
+      <img src="images/women/purple girl shoes.jpeg" />
+      <h3>Purble Shoes</h3>
+      <h6>$450.00</h6>
+      <button class="buy-2" data-product="Purble Shoes" onclick="toggleCart('Purble Shoes', 450, this)">Buy Now</button>
+    </div>
 
+    <div class="content">
+      <img src="images/women/white air jordan girls.jpeg" />
+      <h3>White Air Jordan</h3>
+      <h6>$520.00</h6>
+      <button class="buy-3" data-product="White Air Jordan" onclick="toggleCart('White Air Jordan', 520, this)">Buy Now</button>
+    </div>
 
-    
+    <div class="content">
+      <img src="images/women/high neck girls.jpeg" />
+      <h3>High Neck</h3>
+      <h6>$600.00</h6>
+      <button class="buy-4" data-product="High Neck" onclick="toggleCart('High Neck', 600, this)">Buy Now</button>
+    </div>
 
+    <div class="content">
+      <img src="images/women/girl running shoes.jpeg" />
+      <h3>Running Shoes</h3>
+      <h6>$278.00</h6>
+      <button class="buy-5" data-product="Running Shoes" onclick="toggleCart('Running Shoes', 278, this)">Buy Now</button>
+    </div>
 
-      
+    <div class="content">
+      <img src="images/women/green girl shoes.jpeg" />
+      <h3>Green Shoes</h3>
+      <h6>$399.00</h6>
+      <button class="buy-6" data-product="Green Shoes" onclick="toggleCart('Green Shoes', 399, this)">Buy Now</button>
+    </div>
+  </div>
+
+  <div id="floating-cart">
+    <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+  </div>
+
+  <script>
+    function isInCart(product) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      return cart.some(item => item.product === product);
+    }
+
+    function toggleCart(product, price, button) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const index = cart.findIndex(item => item.product === product);
+
+      if (index === -1) {
+        cart.push({ product, price });
+        button.textContent = "Remove from Cart";
+      } else {
+        cart.splice(index, 1);
+        button.textContent = "Buy Now";
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartButtons() {
+      const buttons = document.querySelectorAll('button[data-product]');
+      buttons.forEach(button => {
+        const product = button.getAttribute('data-product');
+        button.textContent = isInCart(product) ? "Remove from Cart" : "Buy Now";
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartButtons();
+    });
+  </script>
 </body>
-
 </html>
-
-
 
 
 

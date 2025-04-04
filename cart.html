@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #cart {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #cart li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .remove-btn {
+            background: transparent;
+            border: none;
+            color: red;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #total {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #a22188;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Shopping Cart</h1>
+    <ul id="cart"></ul>
+    <h3>Total: $<span id="total">0</span></h3>
+    <a href="home.html" class="back-home">Back to Home</a>
+
+    <script>
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartList = document.getElementById('cart');
+            const totalElement = document.getElementById('total');
+            let total = 0;
+            cartList.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+          ${item.product} - $${item.price}
+          <button class="remove-btn" onclick="removeFromCart(${index})">&times;</button>
+        `;
+                cartList.appendChild(li);
+                total += Number(item.price);
+            });
+
+            totalElement.textContent = total.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCart);
+    </script>
+</body>
+
+</html>

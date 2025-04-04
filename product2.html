@@ -1,213 +1,121 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <title>Product Price</title>
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="../bootstrap/all.min.css" />
-    <link rel="stylesheet" href="../bootstrap.js/bootstrap.bundle.min.js" />
-    <link rel="stylesheet" href="../bootstrap.js/all.min.js" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Latest compiled JavaScript -->
-    <link rel="stylesheet" href="product1.css">
-    <link href="mu.jpg" type="image/x-icon" rel="icon">
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../bootstrap/all.min.css" rel="stylesheet" />
+    <link href="../bootstrap.js/bootstrap.bundle.min.js" rel="stylesheet" />
+    <link href="../bootstrap.js/all.min.js" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="products.css" rel="stylesheet" />
+    <link href="mu.jpg" rel="icon" type="image/x-icon" />
+    <style>
+        #floating-cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #a22188;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #floating-cart:hover {
+            background-color: #871a6d;
+        }
+    </style>
 </head>
+
 <body>
     <h1>air jordan</h1>
-    <div class="Search-box">
-        <div class="neg">
-            <div class="box-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <input type="text" placeholder="Search" class="search-input" onkeyup="search()">
+
+    <div class="gallery">
+        <div class="content">
+            <img src="images/air jordan/yellow home jordan.jpg" />
+            <h3>yellow</h3>
+            <h6>$500.00</h6>
+            <button class="buy-7" data-product="yellow" onclick="toggleCart('yellow', 500, this)">Buy Now</button>
+        </div>
+        <div class="content">
+            <img src="images/air jordan/air-jordan-1-banned.jpg" />
+            <h3>red airjordan</h3>
+            <h6>$450.00</h6>
+            <button class="buy-8" data-product="red airjordan" onclick="toggleCart('red airjordan', 450, this)">Buy
+                Now</button>
+        </div>
+        <div class="content">
+            <img src="images/air jordan/blue airjordan.png" />
+            <h3>blue air jordan</h3>
+            <h6>$520.00</h6>
+            <button class="buy-9" data-product="blue air jordan" onclick="toggleCart('blue air jordan', 520, this)">Buy
+                Now</button>
+        </div>
+        <div class="content">
+            <img src="images/air jordan/high neck girls.jpeg" />
+            <h3>pink air jordan</h3>
+            <h6>$600.00</h6>
+            <button class="buy-10" data-product="pink air jordan" onclick="toggleCart('pink air jordan', 600, this)">Buy
+                Now</button>
+        </div>
+        <div class="content">
+            <img src="images/air jordan/air.jpg" />
+            <h3>running shoes</h3>
+            <h6>$278.00</h6>
+            <button class="buy-11" data-product="running shoes" onclick="toggleCart('running shoes', 278, this)">Buy
+                Now</button>
+        </div>
+        <div class="content">
+            <img src="images/air jordan/blue airjordan.png" />
+            <h3>green shoes</h3>
+            <h6>$399.00</h6>
+            <button class="buy-12" data-product="green shoes" onclick="toggleCart('green shoes', 399, this)">Buy
+                Now</button>
         </div>
     </div>
 
-    <div class="gallery">
+    <div id="floating-cart">
+        <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+    </div>
 
-        <div class="content">
+    <script>
+        function isInCart(product) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            return cart.some(item => item.product === product);
+        }
 
-            <img src="images/air jordan/yellow home jordan.jpg">
+        function toggleCart(product, price, button) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const index = cart.findIndex(item => item.product === product);
 
-            <h3>yellow</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$500.00</h6>
-            <ul>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star "></i></li>
-            </ul>
-            <button class="buy-7">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
+            if (index === -1) {
+                cart.push({ product, price });
+                button.textContent = "Remove from Cart";
+            } else {
+                cart.splice(index, 1);
+                button.textContent = "Buy Now";
+            }
 
-          
-        </div>
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
 
+        function updateCartButtons() {
+            const buttons = document.querySelectorAll('button[data-product]');
+            buttons.forEach(button => {
+                const product = button.getAttribute('data-product');
+                button.textContent = isInCart(product) ? "Remove from Cart" : "Buy Now";
+            });
+        }
 
-
-        <div class="content">
-
-            <img src="images/air jordan/air-jordan-1-banned.jpg">
-
-            <h3>red airjordan</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$450.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-8">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-
-        </div>
-
-
-        <div class="content">
-
-            <img src="images/air jordan/blue airjordan.png">
-
-            <h3> blue air jordan</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$520.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-9">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-        </div>
-
-
-
-        <div class="content">
-            <img src="images/air jordan/high neck girls.jpeg">
-            <h3> pink air jordan</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$600.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-10">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-        </div>
-
-
-
-        <div class="content">
-
-            <img src="images/air jordan/air.jpg">
-            <h3>running shoes</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <h6>$278.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-11">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-
-
-        </div>
-
-
-
-        <div class="content">
-            <img src="images/air jordan/blue airjordan.png">
-            <h3>green shoes</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-            <h6>$399.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star checked"></i>
-                </li>
-                <li>
-                    <i class="fa fa-star "></i>
-                </li>
-            </ul>
-            <button class="buy-12">
-                Buy Now
-            </button>
-            <div class="cartt"> <button onclick="addToCart('Product Name', 10.00)">Add to Cart</button>
-            </div>
-
-
-        </div>
-
-
-      
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartButtons();
+        });
+    </script>
 </body>
 
 </html>
