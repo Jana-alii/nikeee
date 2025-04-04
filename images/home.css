@@ -1,0 +1,15 @@
+.homewallpaper
+{
+    background-image: url(nike\ shoese.webp);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.navbar-brand{
+    font-size: xx-large;
+    color: aliceblue;
+    font-style: normal;
+}
+#cover{
+    color: aliceblue;
+}

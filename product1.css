@@ -1,0 +1,362 @@
+
+
+
+/*links profile/
+
+
+
+.container .profile-links::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    left: -30px;
+    bottom: -20px;
+
+}
+
+.container .profile-links #cover ul {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255);
+    border: 1px solid black;
+
+}
+
+.container .profile-links #cover .ul li {
+    position: relative;
+    left: -20px;
+    border-bottom: 1px solid black;
+    width: 100%;
+
+}
+
+.container .profile-links #cover .ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: .5s;
+    color: black;
+}
+
+.container .profile-links #cover .ul li a:hover {
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0);
+    padding-bottom: 15px;
+    padding-left: 15px;
+    color: #808080;
+}
+
+.container .profile-links #cover ul .list-last {
+    border: none;
+}
+
+.Search-box {
+
+    width: 250px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+
+}
+
+.neg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.neg .box-icon {
+    padding: 0 10px;
+}
+
+.Search-box input {
+    width: 100%;
+    background-color: #333;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+}
+
+
+
+/end nav-bar/
+body {
+    font-family: Arial sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.M {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+*/
+
+h3 {
+    color: #0b0b0b;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+h3:hover {
+    font-weight: bold;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+
+
+.content {
+    position: relative;
+   
+    width: 40%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border: radius 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+    transition: .1s;
+}
+
+.content:hover {
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16), 0 3px 6px rgb(0, 0, 0, 0.23);
+    transform: translate(5px, -20px);
+
+}
+
+img {
+    background-size: 320px, 120px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+
+}
+
+
+
+p {
+    text-align: center;
+    color: black;
+    padding-top: 0 8px;
+    font-family: Garamond, serif;
+    font-weight: bold;
+
+
+}
+
+p:hover {
+    font-family: var(--dark-color);
+}
+
+h6 {
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    margin: 20px;
+
+
+}
+
+h6:hover {
+    color: gold;
+    font-family: var(--dark-color);
+    font-weight: bold;
+}
+
+.content ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+li {
+    padding-top: 5px;
+
+}
+
+.fa {
+    font-size: 50px;
+    transition: .4s;
+    margin: 3px;
+
+}
+
+.fa:hover {
+    transform: scale(1.5);
+    transition: .6s;
+
+}
+
+.checked {
+    color: #ff9f43;
+
+}
+
+
+button {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.content:hover .button1{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top:30px;
+    left:5px;
+}
+.content:hover .button2{
+    position:absolute;
+    width: 60px;
+    height:60px;
+    top:100px;
+    left:5px;
+}
+.buy-1 {
+    background: #a22188;
+
+}
+
+.buy-2 {
+    background: #a22188;
+}
+
+.buy-3 {
+    background: #a22188;
+
+}
+
+.buy-4 {
+    background: #a22188;
+
+}
+.buy-5{
+    background-color: #a22188;
+}
+.buy-6{
+    background-color: #a22188;
+}
+.buy-7{
+    background-color: rgb(248, 230, 124);
+}
+.buy-8{
+    background-color: rgb(248, 230, 124);
+}
+.buy-9{
+    background-color: rgb(248, 230, 124);
+}
+.buy-10{
+    background-color: rgb(248, 230, 124);
+}
+.buy-11{
+    background-color: rgb(248, 230, 124);
+}
+.buy-12{
+    background-color: rgb(248, 230, 124);
+}
+
+
+
+/media/
+@media (max-width:992px) {
+    .container .profile-links #cover {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        left: 10px;
+        top: -15px;
+        display: none;
+        z-index: 4;
+    }
+}
+
+
+
+@media (min-width:992px) {
+    .container .profile-links #cover {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: -80px;
+        top: 40px;
+        display: none;
+        z-index: 4;
+        transition: 0.4s
+    }
+}
+
+@media (max-width:1000px) {
+    .content {
+        width: 45%;
+
+    }
+
+}
+
+@media (max-width:750px) {
+    .content {
+        width: 100%;
+    }
+}
+
+
+.cart {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #a22188;
+}
+.cartt button {
+    background-color: #d575c4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cartt button:hover {
+    background-color: #d575c4;
+}

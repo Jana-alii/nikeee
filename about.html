@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <title>about padge</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bootstrap.js/bootstrap.bundle.min.js" />
+    <link rel="stylesheet" href="../bootstrap.js/all.min.js" />
+    <link rel="stylesheet" href="../bootstrap/all.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style-about.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../HTML/home.html">Nike</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="../HTML/about.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="../HTML/services.html">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="../HTML/contuct.html">contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="../HTML/products.html">product</a>
+                    </li>
+                </ul>
+                <div id="profile-links" class="profile-links">
+                    
+                    <div id="cover" class="cover">
+                        <ul class="ul">
+                            <li><a href="services.html">my_acount</a></li>
+                            <li><a href="sign up.html" target="_blank">sign</a></li>
+                            <li class="list-last"><a href="sign up.html" target="_blank">signup</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- about section -->
+
+
+    <div class="about">
+        <section class="about" id="about">
+            <h1 class="heading"><span>about</span>us</h1>
+            <div class="row2">
+                <div class="video-container">
+                    <video src="images/WhatsApp Video 2025-03-26 at 23.58.01_261864a8.mp4" controls autoplay></video>
+                </div>
+                <div class="content">
+                    <h3> Why choose us?</h3>
+                   
+                    <p>Nike is a popular brand that is chosen by many individuals for various reasons. One of the main reasons for choosing Nike is its strong brand image and reputation. Nike is known for producing high-quality athletic footwear, apparel, equipment, and accessories. The brand has a long history of providing products that are both stylish and functional, making it a preferred choice for many athletes and sports enthusiasts.
+                        Another reason for choosing Nike is its association with professional athletes and sports teams. Nike sponsors numerous athletes and teams, which adds to its credibility and appeal. Many individuals are inspired by these athletes and feel a connection to the brand through their achievements.</p>
+                    <br><br>
+                    <hr>
+                    <fieldset>
+                        <legend>Evalution:</legend>
+                        <form action="#">
+                            <label for="name">name:</label>
+                            <input type="text" required placeholder="Customer name">
+                            <label for="Phone">Phone:</label>
+                            <input type="number" required placeholder="01..">
+                            <label for="Comment">Comment:</label>
+                            <input type="text" required placeholder="....">
+                            <br> <br>
+                            <hr>
+                            <a href="../HTML/contuct.html" class="submit">Send</a>
+                        </form>
+                    </fieldset>
+                    <br><br>
+                    <div class="t">
+                        <p>Thanks for visiting our website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../bootstrap.js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap.js/all.min.js"></script>
+    <script src="../iquery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".profile-links").click(function () {
+                $(".cover").fadeToggle();
+            })
+        })
+    </script>
+</body>

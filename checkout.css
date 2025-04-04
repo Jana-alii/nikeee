@@ -1,0 +1,102 @@
+body {
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body {
+    font-family: sans-serif;
+    background-image: url('../image/flexible payment.jpeg');
+    background-size:cover;
+    background-position:center;
+}
+
+form{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+.container {
+    width: 400px;
+    background: rgb(0, 255, 33);
+    padding: 40px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background: rgba(255,255,255,.1);
+    border-radius:10px;
+   
+}
+.logo{
+    margin-bottom:40px;
+    text-align:center;
+    font-size:36px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:rgb(195, 72, 168);
+    text-transform: uppercase;
+    
+}
+.container .input {
+    width: 100%;
+}
+.container .input div{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.container .input div input {
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: 2px solid color(srgb rgb(102, 11, 64) green blue);
+    border-radius:4px;
+}
+
+.select{
+    display:flex;
+    flex-flow: row wrap;
+    gap:4px;
+    margin:0 0 20px 0;
+    color:white;
+}
+.select #sel{
+    border:none;
+    border-radius:3px;
+    outline:none;
+    text-transform:capitalize;
+}
+
+.select label{
+    text-transform:capitalize;
+    font-size:medium;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+.button input{
+    width:100%;
+    padding:10px;
+    outline:none;
+    border:none;
+    border-radius:45px;
+    background:rgb(134, 8, 121);
+    font-size:20px;
+    font-weight:500;
+    letter-spacing:1px;
+    color:black;
+    cursor:pointer;
+    text-transform:capitalize;
+}
+.cover{
+    margin: auto;
+    width: 100%;
+    background-image: url(images/purple.avif);
+    background-size: cover;
+    background-position: center;
+}
